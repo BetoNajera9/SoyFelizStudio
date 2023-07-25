@@ -1,5 +1,12 @@
 import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import mdiVue from 'mdi-vue/v3'
 
-createApp(App).mount('#app')
+import * as mdijs from '@mdi/js'
+import App from './App.vue'
+import './style.css'
+
+createApp(App)
+  .use(mdiVue, {
+    icons: mdijs,
+  })
+  .mount('#app')
