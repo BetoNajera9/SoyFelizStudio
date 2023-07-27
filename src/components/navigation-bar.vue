@@ -1,5 +1,5 @@
 <template>
-	<nav class="w-full flex justify-around items-center pt-2">
+	<nav class="max-w-5xl mx-auto h-[10%] flex justify-around items-center pt-2">
 		<img
 			src="/src/assets/images/desktop/menu/happy-index.png"
 			alt="soy feliz studio"
