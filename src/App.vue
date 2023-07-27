@@ -1,23 +1,24 @@
 <template>
-	<pop-up v-if="announceStatus === true" @closen="changeAnnounceStatus" />
+	<!-- <pop-up v-if="announceStatus === true" @closen="changeAnnounceStatus" /> -->
 	<navigation-bar />
-	<iframe
+	<!-- <iframe
 		class="w-full h-screen"
 		src="https://www.youtube.com/embed/yQstboNNj8w"
 		frameborder="0"
 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-	/>
+	/> -->
+	<we />
 </template>
-2
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 
 import NavigationBar from './components/navigation-bar.vue'
 import PopUp from './components/pop-up.vue'
+import We from './components/we.vue'
 
 export default defineComponent({
-	components: { NavigationBar, PopUp },
+	components: { NavigationBar, PopUp, We },
 	setup() {
 		const announceStatus = ref(true)
 
