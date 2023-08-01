@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fawmi/vue-google-maps": "^0.9.79",
     "@mdi/js": "^7.2.96",
     "@vue/composition-api": "^1.7.1",
     "mdi-vue": "^3.0.13",
