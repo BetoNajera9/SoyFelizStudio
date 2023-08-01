@@ -5,15 +5,16 @@
 		:data="popUpData"
 	/>
 	<navigation-bar />
-	<!-- <iframe
+	<iframe
 		class="w-full h-screen"
 		src="https://www.youtube.com/embed/yQstboNNj8w"
 		frameborder="0"
 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-	/> -->
-	<!-- <we /> -->
-	<!-- <artist /> -->
+	/>
+	<we />
+	<artist />
 	<budget @closen="changeAnnounceStatus" />
+	<contact />
 </template>
 
 <script lang="ts">
