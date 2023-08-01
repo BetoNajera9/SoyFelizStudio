@@ -66,7 +66,6 @@
 						<div class="flex flex-col pt-20">
 							<div class="flex items-center">
 								<img
-									class="scale-[.30]"
 									src="/src/assets/images/desktop/menu/spark.png"
 									alt="spark"
 								/>
