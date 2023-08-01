@@ -31,7 +31,7 @@
 					DE 10 AÑOS!
 					<br />
 				</p>
-				<p class="font-grold leading-none mt-5 font-light tracking-wider">
+				<p class="leading-none mt-5 font-light tracking-wider">
 					Localizados en el corazón de la ciudad de méxico; <br />
 					un espacio multidisciplinario que fomenta el <br />
 					crecimiento artístico y creativo, mientras buscamos <br />la felicidad
@@ -109,10 +109,10 @@ import 'vue3-carousel/dist/carousel.css'
 
 export default {
 	components: {
-		Carousel,
-		Slide,
 		Pagination,
 		Navigation,
+		Carousel,
+		Slide,
 	},
 
 	setup() {
