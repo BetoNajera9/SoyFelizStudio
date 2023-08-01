@@ -2,15 +2,45 @@
 	<div
 		class="bg-transparent-dark flex justify-center items-center w-screen h-screen fixed z-[100]"
 	>
-		<div class="flex flex-col items-end w-5/12">
+		<div
+			class="flex flex-col justify-center items-end max-h-[50%] w-auto"
+			v-if="data === 'home'"
+		>
 			<mdicon
 				@click="$emit('closen')"
 				class="text-white cursor-pointer"
 				id="btn-close"
 				name="close"
 			/>
-			<div class="bg-white h-auto">
-				<img src="/src/assets/images/desktop/home/announce.png" alt="" />
+			<div class="bg-white h-full w-full">
+				<img
+					class="object-fill max-h-[75vh]"
+					src="/src/assets/images/desktop/home/announce.png"
+					alt=""
+				/>
+			</div>
+		</div>
+		<div
+			v-else
+			class="flex flex-col justify-center items-end max-w-[50%] max-h-[75%]"
+		>
+			<mdicon
+				@click="$emit('closen')"
+				class="text-white cursor-pointer"
+				id="btn-close"
+				name="close"
+			/>
+			<div
+				v-if="data === 'conditions'"
+				class="bg-white h-3/4 overflow-y-scroll overflow-auto"
+			>
+				<p class="p-10">{{ conditions }}</p>
+			</div>
+			<div
+				v-else-if="data === 'privacy'"
+				class="bg-white overflow-y-scroll overflow-auto"
+			>
+				<p class="p-10">{{ privacy }}</p>
 			</div>
 		</div>
 	</div>
@@ -18,12 +48,13 @@
 
 <script>
 export default {
+	props: ['data'],
 	setup() {
-		const privacy = `Aviso de privacidad
+		const privacy = `Aviso de privacidad \n
 SOYFELIZSTUDIO, con domicilio en Querétaro 12, int. 3, col. Roma Norte, Cuauhtemoc, CDMX, 06700, es el responsable del uso y protección de sus datos personales (nombre completo, teléfono, edad, dirección de correo electrónico y localidad), y al respecto le informa lo siguiente:
 El tratamiento de los datos personales recibidos en nuestro sitio electrónico, tiene como finalidad la de brindarle el servicio que nos solicita, conocer sus necesidades, preferencias o recomendaciones, estar en posibilidad de ofrecerle lo que más se adecúe a sus gustos y necesidades; así como comunicarle promociones, descuentos, beneficios de cliente y atender quejas y aclaraciones, a sabiendas de que dichos datos podrán ser tratados tanto por nosotros, como por las empresas controladoras y filiales de SOYFELIZSTUDIO, para brindarle un mejor servicio y pronta respuesta a sus solicitudes.
 Sus datos personales son tratados con toda discrecionalidad y de acuerdo a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (la ”Ley”) y su Reglamento, por esto, le informamos que Usted en todo momento cuenta con el derecho de acceder, rectificar, cancelar, u oponerse (“Derechos ARCO”) respecto a su consentimiento respecto del tratamiento que le damos a sus datos personales.
-En todo momento, usted como titular, o en su caso, el representante legal podrá ejercer los derechos que les confiere la Ley, enviando un correo electrónico a contacto@soyfelizstudio.com . Todas las solicitudes que sean enviadas, deberán contener forzosamente y de conformidad con la Ley los siguientes requisitos:
+En todo momento, usted como titular, o en su caso, el representante legal podrá ejercer los derechos que les confiere la Ley, enviando un correo electrónico a contacto@soyfelizstudio.com . Todas las solicitudes que sean enviadas, deberán contener forzosamente y de conformidad con la Ley los siguientes requisitos: \n\n
 Nombre y apellido del titular o representante legal.
 Una descripción clara y precisa de los datos personales respecto de los cuales ejercitará los derechos que le confiere la Ley.
 La dirección de correo electrónico, para facilitar la localización de los datos personales de que se traten.

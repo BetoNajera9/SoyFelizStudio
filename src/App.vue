@@ -1,5 +1,9 @@
 <template>
-	<!-- <pop-up v-if="announceStatus === true" @closen="changeAnnounceStatus" /> -->
+	<pop-up
+		v-if="announceStatus === true"
+		@closen="changeAnnounceStatus"
+		:data="popUpData"
+	/>
 	<navigation-bar />
 	<!-- <iframe
 		class="w-full h-screen"
@@ -9,7 +13,7 @@
 	/> -->
 	<!-- <we /> -->
 	<!-- <artist /> -->
-	<budget />
+	<budget @closen="changeAnnounceStatus" />
 </template>
 
 <script lang="ts">
@@ -27,11 +31,14 @@ export default defineComponent({
 	setup() {
 		const announceStatus = ref(true)
 
-		const changeAnnounceStatus = () => {
+		const popUpData = ref('home')
+		const changeAnnounceStatus = (data: string) => {
+			console.log('🚀 ~ file: App.vue:36 ~ changeAnnounceStatus ~ data:', data)
 			announceStatus.value = !announceStatus.value
+			if (data) popUpData.value = data
 		}
 
-		return { announceStatus, changeAnnounceStatus }
+		return { announceStatus, changeAnnounceStatus, popUpData }
 	},
 })
 </script>
