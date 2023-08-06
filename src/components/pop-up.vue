@@ -51,6 +51,7 @@ import announceData from '../../data.json.json'
 
 export default {
 	props: ['data'],
+
 	setup() {
 		const privacy = `Aviso de privacidad \n
 SOYFELIZSTUDIO, con domicilio en Querétaro 12, int. 3, col. Roma Norte, Cuauhtemoc, CDMX, 06700, es el responsable del uso y protección de sus datos personales (nombre completo, teléfono, edad, dirección de correo electrónico y localidad), y al respecto le informa lo siguiente:

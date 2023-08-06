@@ -5,12 +5,14 @@
 		:data="popUpData"
 	/>
 	<navigation-bar />
-	<iframe
-		class="w-full h-screen"
-		src="https://www.youtube.com/embed/yQstboNNj8w"
-		frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-	/>
+	<div class="lg:mt-10 h-[90vh] max-w-5xl lg:mx-auto lg:h-[36rem]">
+		<iframe
+			class="w-full h-full"
+			src="https://www.youtube.com/embed/nmIYXG8jlbw"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		/>
+	</div>
 	<we />
 	<artist />
 	<budget @closen="changeAnnounceStatus" />
@@ -34,7 +36,6 @@ export default defineComponent({
 
 		const popUpData = ref('home')
 		const changeAnnounceStatus = (data: string) => {
-			console.log('🚀 ~ file: App.vue:36 ~ changeAnnounceStatus ~ data:', data)
 			announceStatus.value = !announceStatus.value
 			if (data) popUpData.value = data
 		}

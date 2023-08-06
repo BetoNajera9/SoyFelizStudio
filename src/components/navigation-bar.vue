@@ -6,23 +6,201 @@
 				alt="soy feliz studio"
 			/>
 			<span>LLEVAMOS EL ARTE EN LA PIEL</span>
-			<img src="/src/assets/images/desktop/menu/spark.png" alt="spark" />
-			<div class="flex justify-around basis-3/5">
+			<span class="hidden">{{ this.$vssWidth }}</span>
+			<img
+				src="/src/assets/images/desktop/menu/spark.png"
+				v-if="this.$vssWidth >= 1024"
+				alt="spark"
+			/>
+			<div v-if="this.$vssWidth >= 1024" class="flex justify-around basis-3/5">
 				<span class="cursor-pointer">INICIO</span>
 				<span class="cursor-pointer">NOSOTROS</span>
 				<span class="cursor-pointer">GALERIA</span>
 				<span class="cursor-pointer">ARTISTAS</span>
 				<span class="cursor-pointer">COTIZA</span>
+				<span class="cursor-pointer">COTIZA</span>
 				<span class="cursor-pointer">CONTACTO</span>
+			</div>
+			<div v-if="this.$vssWidth < 1024">
+				<div id="sidemenu">
+					<button
+						class="sidemenu__btn"
+						@click="navOpen = !navOpen"
+						:class="{ active: navOpen }"
+					>
+						<span class="top"></span>
+						<span class="mid"></span>
+						<span class="bottom"></span>
+					</button>
+					<transition name="translateX">
+						<nav v-show="navOpen">
+							<div class="sidemenu__wrapper">
+								<ul class="sidemenu__list">
+									<li class="sidemenu__item">
+										<a href="">I<span class="text-red">N</span>ICIO</a>
+									</li>
+									<li class="sidemenu__item">
+										<a href="">N<span class="text-red">O</span>SOTROS</a>
+									</li>
+									<li class="sidemenu__item">
+										<a href="">G<span class="text-red">A</span>LERIA</a>
+									</li>
+									<li class="sidemenu__item">
+										<a href="">ARTIS<span class="text-red">T</span>AS</a>
+									</li>
+									<li class="sidemenu__item">
+										<a href="">CO<span class="text-red">T</span>IZA</a>
+									</li>
+									<li class="sidemenu__item">
+										<a href="">CONTAC<span class="text-red">T</span>O</a>
+									</li>
+									<li class="mt-10">
+										<img
+											src="/src/assets/images/desktop/menu/happy-face.png"
+											alt=""
+										/>
+									</li>
+								</ul>
+							</div>
+						</nav>
+					</transition>
+				</div>
 			</div>
 		</div>
 	</nav>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { VueScreenSizeMixin } from 'vue-screen-size'
+import { defineComponent, ref } from 'vue'
+import { Slide } from 'vue-burger-menu'
 
 export default defineComponent({
-	setup() {},
+	mixins: [VueScreenSizeMixin],
+	componenets: { Slide },
+	setup() {
+		const navOpen = ref(false)
+
+		return {
+			navOpen,
+		}
+	},
 })
 </script>
+
+<style lang="scss">
+#sidemenu {
+	nav {
+		color: black;
+		width: 100%;
+		height: 100%;
+		background: white;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 99;
+	}
+
+	.sidemenu {
+		&__btn {
+			display: block;
+			width: 50px;
+			height: 50px;
+			background: white;
+			border: none;
+			position: relative;
+			z-index: 100;
+			appearance: none;
+			cursor: pointer;
+			outline: none;
+
+			span {
+				display: block;
+				width: 20px;
+				height: 2px;
+				margin: auto;
+				background: white;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				transition: all 0.4s ease;
+
+				&.top {
+					background: black;
+					transform: translateY(-8px);
+				}
+
+				&.mid {
+					background: black;
+				}
+
+				&.bottom {
+					background: black;
+					transform: translateY(8px);
+				}
+			}
+			&.active {
+				.top {
+					transform: rotate(-45deg);
+				}
+				.mid {
+					transform: translateX(-20px) rotate(360deg);
+					opacity: 0;
+				}
+				.bottom {
+					transform: rotate(45deg);
+				}
+			}
+		}
+
+		&__wrapper {
+			padding-top: 50px;
+		}
+
+		&__list {
+			padding-top: 50px;
+			list-style: none;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 0;
+			margin: 0;
+		}
+
+		&__item {
+			a {
+				text-decoration: none;
+				line-height: 1.6em;
+				font-size: 1.6em;
+				padding: 0.5em;
+				display: block;
+				color: black;
+				transition: 0.4s ease;
+
+				&:hover {
+					background: lightgrey;
+					color: dimgrey;
+				}
+			}
+		}
+	}
+}
+
+.translateX-enter {
+	transform: translateX(-200px);
+	opacity: 0;
+}
+
+.translateX-enter-active,
+.translateX-leave-active {
+	transform-origin: top left 0;
+	transition: 0.2s ease;
+}
+
+.translateX-leave-to {
+	transform: translateX(-200px);
+	opacity: 0;
+}
+</style>

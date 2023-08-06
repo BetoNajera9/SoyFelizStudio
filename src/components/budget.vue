@@ -1,9 +1,9 @@
 <template>
-	<div class="my-5 mx-10">
-		<span class="text-6xl">
+	<div class="mt-20 max-w-5xl md:mx-10 lg:mx-auto px-5 md:px-10">
+		<span class="text-4xl lg:text-6xl">
 			CO<span class="text-red">T</span>IZA TU TATUAJE
 		</span>
-		<form class="grid grid-cols-2 mr-5" onsubmit="return false">
+		<form class="flex flex-col lg:grid grid-cols-2" onsubmit="return false">
 			<div class="flex flex-col">
 				<span class="mt-4">Nombre completo</span>
 				<input type="text" :class="inputStyle" v-model="name" />
@@ -16,7 +16,7 @@
 				<span class="mt-4">Dirección</span>
 				<input type="text" :class="inputStyle" v-model="address" />
 			</div>
-			<div class="flex flex-col ml-5">
+			<div class="flex flex-col lg:ml-5">
 				<span class="mt-4">Zona del cuerpo donde quieres tu tatuaje</span>
 				<input type="text" :class="inputStyle" v-model="zone" />
 				<span class="mt-4">Tamaño (cm x cm)</span>
@@ -38,8 +38,9 @@
 					<span
 						@click="$emit('closen', 'privacy')"
 						class="text-red ml-2 hover:underline hover:cursor-pointer"
-						>He leido aviso de privacidad</span
 					>
+						He leido aviso de privacidad
+					</span>
 				</div>
 				<div class="flex items-center">
 					<input
@@ -51,8 +52,9 @@
 					<span
 						@click="$emit('closen', 'conditions')"
 						class="text-red ml-2 hover:underline hover:cursor-pointer"
-						>He leido terminos y condiciones</span
 					>
+						He leido terminos y condiciones
+					</span>
 				</div>
 				<div class="flex mt-10">
 					<button class="bg-black text-white px-10 py-1" @click="send">
