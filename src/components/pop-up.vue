@@ -15,14 +15,14 @@
 			<div class="bg-white h-full w-full">
 				<img
 					class="object-fill max-h-[75vh]"
-					src="/src/assets/images/desktop/home/announce.png"
+					:src="`/src/assets/images/desktop/home/${announceData.popUp}`"
 					alt=""
 				/>
 			</div>
 		</div>
 		<div
 			v-else
-			class="flex flex-col justify-center items-end max-w-[50%] max-h-[75%]"
+			class="flex flex-col justify-center items-end sm:max-w-[50%] max-h-[75%]"
 		>
 			<mdicon
 				@click="$emit('closen')"
@@ -47,6 +47,8 @@
 </template>
 
 <script>
+import announceData from '../../data.json.json'
+
 export default {
 	props: ['data'],
 	setup() {
@@ -103,6 +105,7 @@ Entiendo que si tengo tratamientos de piel, depilación laser, cirugía plástic
 Comprendo perfectamente que un tatuaje representa un cambio permanente en mi cuerpo y que dicho tatuaje no podrá ser removido. De querer realizar algún cambio este será con el costo que marque el estudio.`
 
 		return {
+			announceData,
 			conditions,
 			privacy,
 		}

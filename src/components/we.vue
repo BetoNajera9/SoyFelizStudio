@@ -1,7 +1,7 @@
 <template>
-	<div class="h-[90%] max-w-5xl mx-5 lg:mx-auto">
-		<section class="flex pb-52 mt-10">
-			<div class="max-w-sm">
+	<div class="max-w-5xl mx-5 lg:mx-auto mt-20 px-0 md:px-10">
+		<section class="flex flex-col items-center lg:flex-row  lg:pb-52 mt-10">
+			<div class="max-w-sm hidden lg:block">
 				<img
 					src="/src/assets/images/desktop/home/logo.png"
 					alt="soy feliz studio logo"
@@ -16,8 +16,8 @@
 			<span class="text-red">F</span>ELICES
 		</p> -->
 			<div>
-				<div class="text-6xl mb-4">NOSO<span class="text-red">T</span>ROS</div>
-				<p class="text-6xl leading-none">
+				<div class="text-4xl md:text-5xl lg:text-6xl mb-4">NOSO<span class="text-red">T</span>ROS</div>
+				<p class="text-4xl md:text-5xl lg:text-6xl leading-none">
 					¡EN SOY <span class="text-red">F</span>ELIZ
 					<br />
 					LLEVAMOS
@@ -38,7 +38,13 @@
 					de nuestros clientes.
 				</p>
 			</div>
-			<div class="flex flex-col w-72">
+			<div class="max-w-sm block lg:hidden mt-10">
+				<img
+					src="/src/assets/images/desktop/home/logo.png"
+					alt="soy feliz studio logo"
+				/>
+			</div>
+			<div class="hidden lg:flex flex-col w-72">
 				<div class="">
 					<img
 						src="/src/assets/images/desktop/home/galery.png"
@@ -53,39 +59,49 @@
 					</div>
 				</div>
 			</div>
+			<p class="block lg:hidden text-4xl mt-5">
+			AR<span class="text-red">T</span>IS<span class="text-red">T</span>AS
+			<br />
+			INCREÍB<span class="text-red">L</span>ES <br />
+			PIEZAS ÚN<span class="text-red">I</span>CAS <br />
+			C<span class="text-red">L</span>IENTES
+			<span class="text-red">F</span>ELICES
+		</p>
 		</section>
 		<section class="my-10">
 			<carousel>
-				<slide v-for="slide in 10" :key="slide">
+				<slide v-for="newData in newsData" :key="newData.title">
 					<div class=".carousel__item flex px-20">
 						<img
-							class="w-1/2"
-							src="/src/assets/images/desktop/home/tatto02.png"
+							class="w-1/2 hidden lg:block"
+							:src="`/src/assets/images/desktop/home/${newData.image}`"
 							alt=""
 						/>
 						<div class="flex flex-col pt-20">
-							<div class="flex items-center">
+							<div class="flex items-center md:ml-10">
 								<img
 									src="/src/assets/images/desktop/menu/spark.png"
 									alt="spark"
 								/>
-								<span class="text-left text-4xl">Prensa</span>
+								<span class="ml-5 text-left text-3xl lg:text-4xl">{{newData.title}}</span>
 							</div>
-							<div class="ml-16 mt-5">
+							<div class="md:ml-16 mt-5 flex flex-col items-center lg:justify-start ">
 								<p class="text-left">
-									<p class="text-4xl">
-									10 cuentas de instagram de tatuadores mexicanos para tu
-									próxima sesión
+									<p class="text-3xl lg:text-4xl">
+									{{newData.subtitle}}
 									</p>
-									En la actualidad, los tatuajes en México son un
-									estilo de vida que refuerzan la identidad de una persona,
-									población e incluso historia.
+									{{newData.description}}
 								</p>
 								<div class="flex my-9">
 									<button class="bg-black text-white py-2 px-3 rounded">
 										VER MÁS
 									</button>
 								</div>
+								<img
+									:src="`/src/assets/images/desktop/home/${newData.image}`"
+									class="md-full md:w-1/2 block lg:hidden"
+									alt=""
+								/>
 							</div>
 						</div>
 					</div>
@@ -104,6 +120,8 @@
 // import comp from '@vue/composition-api'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
+import NewsData from '../../data.json'
+
 import 'vue3-carousel/dist/carousel.css'
 
 export default {
@@ -115,7 +133,11 @@ export default {
 	},
 
 	setup() {
-		return {}
+		const newsData = NewsData.news
+
+		return {
+			newsData
+		}
 	},
 }
 </script>
