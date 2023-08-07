@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import announceData from '../../data.json.json'
+import announceData from '../../data.json'
 
 export default {
 	props: ['data'],

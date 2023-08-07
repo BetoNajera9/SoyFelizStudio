@@ -28,9 +28,9 @@
 						@click="navOpen = !navOpen"
 						:class="{ active: navOpen }"
 					>
-						<span class="top"></span>
-						<span class="mid"></span>
-						<span class="bottom"></span>
+						<span class="top" />
+						<span class="mid" />
+						<span class="bottom" />
 					</button>
 					<transition name="translateX">
 						<nav v-show="navOpen">
@@ -73,11 +73,9 @@
 <script>
 import { VueScreenSizeMixin } from 'vue-screen-size'
 import { defineComponent, ref } from 'vue'
-import { Slide } from 'vue-burger-menu'
 
 export default defineComponent({
 	mixins: [VueScreenSizeMixin],
-	componenets: { Slide },
 	setup() {
 		const navOpen = ref(false)
 

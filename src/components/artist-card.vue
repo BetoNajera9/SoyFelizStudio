@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col lg:mx-10">
-		<div class="">
+		<div>
 			<img :src="`/src/assets/images/desktop/artists/${image}`" alt="" />
 		</div>
 		<div class="hidden lg:flex items-center mt-5">

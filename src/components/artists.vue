@@ -14,7 +14,7 @@
 					/>
 				</div>
 				<span class="text-4xl h-auto">{{ artistSelected.name }}</span>
-				<div class="">
+				<div>
 					<span>{{ artistSelected.profile }}</span>
 				</div>
 				<br />

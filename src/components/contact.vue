@@ -3,9 +3,9 @@
 		class="flex flex-col lg:grid grid-cols-3 max-w-5xl mx-5 md:mx-10 lg:mx-auto py-24 md:px-10"
 	>
 		<div class="flex flex-col">
-			<span class="text-4xl lg:text-6xl"
-				>CON<span class="text-red">T</span>ACTO</span
-			>
+			<span class="text-4xl lg:text-6xl">
+				CON<span class="text-red">T</span>ACTO
+			</span>
 			<span class="my-2">¡Hagamos arte juntos!</span>
 			<span class="my-2">
 				Te atendemos con gusto de lunes a domingo de 11 am a 8 pm
