@@ -17,19 +17,37 @@
 		</div>
 	</div>
 	<navigation-bar />
-	<div class="lg:mt-10 h-[90vh] max-w-5xl lg:mx-auto lg:h-[36rem]">
+	<section
+		class="lg:mt-10 h-[90vh] max-w-5xl lg:mx-auto lg:h-[36rem]"
+		id="home"
+	>
 		<iframe
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 			src="https://www.youtube.com/embed/nmIYXG8jlbw"
 			class="w-full h-full"
 			frameborder="0"
 		/>
-	</div>
-	<we />
-	<instagram-feed />
-	<artist />
-	<budget @closen="changeAnnounceStatus" />
-	<contact />
+	</section>
+
+	<section id="we">
+		<we />
+	</section>
+
+	<section id="galery">
+		<instagram-feed />
+	</section>
+
+	<section id="artists">
+		<artist />
+	</section>
+
+	<section id="budget">
+		<budget @closen="changeAnnounceStatus" />
+	</section>
+
+	<section id="contact">
+		<contact />
+	</section>
 </template>
 
 <script lang="ts">

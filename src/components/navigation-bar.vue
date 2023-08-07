@@ -13,13 +13,28 @@
 				alt="spark"
 			/>
 			<div v-if="this.$vssWidth >= 1024" class="flex justify-around basis-3/5">
-				<span class="cursor-pointer">INICIO</span>
-				<span class="cursor-pointer">NOSOTROS</span>
-				<span class="cursor-pointer">GALERIA</span>
-				<span class="cursor-pointer">ARTISTAS</span>
-				<span class="cursor-pointer">COTIZA</span>
-				<span class="cursor-pointer">COTIZA</span>
-				<span class="cursor-pointer">CONTACTO</span>
+				<a href="#home" v-smooth-scroll
+					><span class="cursor-pointer">INICIO</span></a
+				>
+				<a href="#we" v-smooth-scroll>
+					<span class="cursor-pointer">NOSOTROS</span>
+				</a>
+
+				<a href="#galery" v-smooth-scroll>
+					<span class="cursor-pointer">GALERIA</span>
+				</a>
+
+				<a href="#artists" v-smooth-scroll>
+					<span class="cursor-pointer">ARTISTAS</span>
+				</a>
+
+				<a href="#budget" v-smooth-scroll>
+					<span class="cursor-pointer">COTIZA</span>
+				</a>
+
+				<a href="#contact" v-smooth-scroll>
+					<span class="cursor-pointer">CONTACTO</span>
+				</a>
 			</div>
 			<div v-if="this.$vssWidth < 1024">
 				<div id="sidemenu">
@@ -36,24 +51,42 @@
 						<nav v-show="navOpen">
 							<div class="sidemenu__wrapper">
 								<ul class="sidemenu__list">
-									<li class="sidemenu__item">
-										<a href="">I<span class="text-red">N</span>ICIO</a>
+									<li class="sidemenu__item" @click="navOpen = !navOpen">
+										<a href="#home" v-smooth-scrol>
+											I<span class="text-red">N</span>ICIO
+										</a>
 									</li>
-									<li class="sidemenu__item">
-										<a href="">N<span class="text-red">O</span>SOTROS</a>
+
+									<li class="sidemenu__item" @click="navOpen = !navOpen">
+										<a href="#we" v-smooth-scroll>
+											N<span class="text-red">O</span>SOTROS
+										</a>
 									</li>
-									<li class="sidemenu__item">
-										<a href="">G<span class="text-red">A</span>LERIA</a>
+
+									<li class="sidemenu__item" @click="navOpen = !navOpen">
+										<a href="#galery" v-smooth-scroll>
+											G<span class="text-red">A</span>LERIA
+										</a>
 									</li>
-									<li class="sidemenu__item">
-										<a href="">ARTIS<span class="text-red">T</span>AS</a>
+
+									<li class="sidemenu__item" @click="navOpen = !navOpen">
+										<a href="#artists" v-smooth-scroll>
+											ARTIS<span class="text-red">T</span>AS
+										</a>
 									</li>
-									<li class="sidemenu__item">
-										<a href="">CO<span class="text-red">T</span>IZA</a>
+
+									<li class="sidemenu__item" @click="navOpen = !navOpen">
+										<a href="#budget" v-smooth-scroll>
+											CO<span class="text-red">T</span>IZA
+										</a>
 									</li>
-									<li class="sidemenu__item">
-										<a href="">CONTAC<span class="text-red">T</span>O</a>
+
+									<li class="sidemenu__item" @click="navOpen = !navOpen">
+										<a href="#contact" v-smooth-scroll>
+											CONTAC<span class="text-red">T</span>O
+										</a>
 									</li>
+
 									<li class="mt-10">
 										<img
 											src="/src/assets/images/desktop/menu/happy-face.png"
