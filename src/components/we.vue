@@ -1,28 +1,29 @@
 <template>
 	<div class="max-w-5xl mx-5 lg:mx-auto mt-20 px-0 md:px-10">
 		<section class="flex flex-col items-center lg:flex-row  lg:pb-52 mt-10">
-			<div class="max-w-sm hidden lg:block">
+			<div class="h-full max-w-sm hidden lg:block">
 				<img
 					src="/src/assets/images/desktop/home/logo.png"
 					alt="soy feliz studio logo"
 				/>
+				<p class="text-6xl absolute top-[1220px]">
+				AR<span class="text-red">T</span>IS<span class="text-red">T</span>AS
+				<br />
+				INCREÍB<span class="text-red">L</span>ES <br />
+				PIEZAS ÚN<span class="text-red">I</span>CAS <br />
+				C<span class="text-red">L</span>IENTES
+				<span class="text-red">F</span>ELICES
+			</p>
 			</div>
-			<!-- <p class="text-6xl absolute bottom-[0%]">
-			AR<span class="text-red">T</span>IS<span class="text-red">T</span>AS
-			<br />
-			INCREÍB<span class="text-red">L</span>ES <br />
-			PIEZAS ÚN<span class="text-red">I</span>CAS <br />
-			C<span class="text-red">L</span>IENTES
-			<span class="text-red">F</span>ELICES
-		</p> -->
+
 			<div>
-				<div class="text-4xl md:text-5xl lg:text-6xl mb-4">NOSO<span class="text-red">T</span>ROS</div>
-				<p class="text-4xl md:text-5xl lg:text-6xl leading-none">
+				<div class="text-4xl md:text-4xl lg:text-5xl mb-4">NOSO<span class="text-red">T</span>ROS</div>
+				<p class="text-4xl md:text-4xl lg:text-5xl leading-none">
 					¡EN SOY <span class="text-red">F</span>ELIZ
 					<br />
 					LLEVAMOS
 					<br />
-					EL AR<span class="text-red">TE</span> EN
+					EL AR<span class="text-red">T</span>E EN
 					<br />
 					LA PIE<span class="text-red">L</span> DESDE
 					<br />
@@ -38,7 +39,7 @@
 					de nuestros clientes.
 				</p>
 			</div>
-			<div class="max-w-sm block lg:hidden mt-10">
+			<div class="max-w-sm block lg:hidden mt-5">
 				<img
 					src="/src/assets/images/desktop/home/logo.png"
 					alt="soy feliz studio logo"
@@ -117,7 +118,6 @@
 </template>
 
 <script>
-// import comp from '@vue/composition-api'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 import NewsData from '../../data.json'
