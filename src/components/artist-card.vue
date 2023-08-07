@@ -18,7 +18,7 @@
 	</div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
 	props: ['image', 'name', 'profile', 'description'],
 	setup() {},

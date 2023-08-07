@@ -117,7 +117,7 @@
 	</div>
 </template>
 
-<script>
+<script lang="ts">
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 import NewsData from '../../data.json'
