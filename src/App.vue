@@ -4,13 +4,25 @@
 		@closen="changeAnnounceStatus"
 		:data="popUpData"
 	/>
+	<div
+		class="fixed bottom-0 right-0 z-[99] mx-[4.5rem] my-16 xl:m-28 cursor-pointer"
+	>
+		<div class="sticky">
+			<img
+				@mouseover="selectImage = happyFaceHover"
+				@mouseleave="selectImage = happyFace"
+				:src="selectImage"
+				alt=""
+			/>
+		</div>
+	</div>
 	<navigation-bar />
 	<div class="lg:mt-10 h-[90vh] max-w-5xl lg:mx-auto lg:h-[36rem]">
 		<iframe
-			class="w-full h-full"
-			src="https://www.youtube.com/embed/nmIYXG8jlbw"
-			frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			src="https://www.youtube.com/embed/nmIYXG8jlbw"
+			class="w-full h-full"
+			frameborder="0"
 		/>
 	</div>
 	<we />
@@ -51,7 +63,20 @@ export default defineComponent({
 			if (data) popUpData.value = data
 		}
 
-		return { announceStatus, changeAnnounceStatus, popUpData }
+		const happyFace = '/src/assets/images/desktop/menu/happy-face.png'
+		const happyFaceHover =
+			'/src/assets/images/desktop/menu/happy-face-hover.png'
+
+		const selectImage = ref(happyFace)
+
+		return {
+			changeAnnounceStatus,
+			announceStatus,
+			happyFaceHover,
+			selectImage,
+			happyFace,
+			popUpData,
+		}
 	},
 })
 </script>

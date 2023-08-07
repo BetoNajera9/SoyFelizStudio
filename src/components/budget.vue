@@ -63,6 +63,11 @@
 				</div>
 			</div>
 		</form>
+		<div
+			class="relative top-[50px] sm:top-[-100px] left-[19px] sm:left-[79px] lg:left-[40px] flex justify-end"
+		>
+			<img src="/src/assets/images/desktop/menu/dedirow.png" alt="" />
+		</div>
 	</div>
 </template>
 
