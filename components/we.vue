@@ -5,19 +5,19 @@
 				<div class="max-w-sm hidden lg:block">
 					<div class="h-full">
 						<nuxt-img
-						src="/images/soyFelizStudio/logo.png"
-						alt="soy feliz studio logo"
-						format="webp"
-					/>
+							src="/images/soyFelizStudio/logo.png"
+							alt="soy feliz studio logo"
+							format="webp"
+						/>
 					</div>
-					<p class="text-5xl absolute top-[1150px] font-grold-black">
-					AR<span class="text-red">T</span>IS<span class="text-red">T</span>AS
-					<br />
-					INCREÍB<span class="text-red">L</span>ES <br />
-					PIEZAS ÚN<span class="text-red">I</span>CAS <br />
-					C<span class="text-red">L</span>IENTES
-					<span class="text-red">F</span>ELICES
-				</p>
+					<p :class="`text-5xl absolute font-grold-black ${absolutePosition}`">
+						AR<span class="text-red">T</span>IS<span class="text-red">T</span>AS
+						<br />
+						INCREÍB<span class="text-red">L</span>ES <br />
+						PIEZAS ÚN<span class="text-red">I</span>CAS <br />
+						C<span class="text-red">L</span>IENTES
+						<span class="text-red">F</span>ELICES
+					</p>
 				</div>
 				<div>
 					<p class="text-4xl md:text-4xl lg:text-5xl leading-none font-grold-black">
@@ -143,9 +143,16 @@ export default {
 	},
 
 	setup() {
+		const config = useRuntimeConfig()
 		const newsData = NewsData.news
 
+		const absolutePosition = ref('top-[1150px]')
+
+		if(!config.public.VIDEO_URL)
+			absolutePosition.value = 'top-[500px]'
+
 		return {
+			absolutePosition,
 			newsData
 		}
 	},

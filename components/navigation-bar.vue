@@ -20,7 +20,7 @@
 				v-if="$viewport.isGreaterOrEquals('desktop')"
 				class="flex justify-around basis-3/5"
 			>
-				<a href="#home">
+				<a :href="absolutePosition">
 					<span class="cursor-pointer tracking-wide">INICIO</span>
 				</a>
 				<a href="#we">
@@ -59,7 +59,9 @@
 							<div class="sidemenu__wrapper">
 								<ul class="sidemenu__list">
 									<li class="sidemenu__item" @click="navOpen = !navOpen">
-										<a href="#home"> I<span class="text-red">N</span>ICIO </a>
+										<a :href="absolutePosition">
+											I<span class="text-red">N</span>ICIO
+										</a>
 									</li>
 
 									<li class="sidemenu__item" @click="navOpen = !navOpen">
@@ -112,9 +114,16 @@ import { defineComponent, ref } from 'vue'
 export default defineComponent({
 	mixins: [VueScreenSizeMixin],
 	setup() {
+		const config = useRuntimeConfig()
+
 		const navOpen = ref(false)
 
+		const absolutePosition = ref('#home')
+
+		if (!config.public.VIDEO_URL) absolutePosition.value = '#we'
+
 		return {
+			absolutePosition,
 			navOpen,
 		}
 	},

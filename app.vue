@@ -1,9 +1,12 @@
 <template>
+	<!--  Pop Up Component  -->
 	<pop-up
 		v-if="announceStatus === true"
 		@closen="changeAnnounceStatus"
 		:data="popUpData"
 	/>
+
+	<!--  Sticky Happy Face  -->
 	<div
 		class="fixed bottom-0 right-0 z-[99] mx-5 md:mx-[4.5rem] my-5 md:my-16 xl:m-28 cursor-pointer"
 	>
@@ -19,35 +22,45 @@
 			</a>
 		</div>
 	</div>
+
+	<!-- Navigation Bar -->
 	<navigation-bar />
+
+	<!--  Video Component  -->
 	<section
+		v-if="videoUrl"
 		class="lg:mt-10 h-[90vh] max-w-5xl lg:mx-auto lg:h-[36rem] scroll-mt-[110px]"
 		id="home"
 	>
 		<iframe
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-			src="https://www.youtube.com/embed/nmIYXG8jlbw"
+			:src="videoUrl"
 			class="w-full h-full"
 			frameborder="0"
 		/>
 	</section>
 
+	<!--  We Component  -->
 	<section class="scroll-mt-[70px]" id="we">
 		<we />
 	</section>
 
+	<!--  Galery Component  -->
 	<section class="scroll-mt-[70px]" id="galery">
 		<instagram-feed />
 	</section>
 
+	<!--  Artist Component  -->
 	<section class="scroll-mt-[70px]" id="artists">
 		<artist />
 	</section>
 
+	<!--  Budget Component  -->
 	<section class="scroll-mt-[70px]" id="budget">
 		<budget @closen="changeAnnounceStatus" />
 	</section>
 
+	<!--  COntact Component  -->
 	<section class="scroll-mt-[-20px]" id="contact">
 		<contact />
 	</section>
@@ -76,6 +89,8 @@ export default defineComponent({
 	},
 
 	setup() {
+		const config = useRuntimeConfig()
+
 		const announceStatus = ref(true)
 
 		const popUpData = ref('home')
@@ -89,6 +104,8 @@ export default defineComponent({
 
 		const selectImage = ref(happyFace)
 
+		const videoUrl = ref(config.public.VIDEO_URL)
+
 		return {
 			changeAnnounceStatus,
 			announceStatus,
@@ -96,6 +113,7 @@ export default defineComponent({
 			selectImage,
 			happyFace,
 			popUpData,
+			videoUrl,
 		}
 	},
 })

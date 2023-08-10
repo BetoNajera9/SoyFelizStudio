@@ -28,4 +28,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+
+  runtimeConfig: {
+    public: {
+      VIDEO_URL: process.env.VIDEO_URL
+    }
+  }
 })
