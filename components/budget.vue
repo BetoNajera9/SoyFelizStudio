@@ -38,7 +38,7 @@
 				<input
 					type="text"
 					:class="inputStyle"
-					placeholder="Direccion"
+					placeholder="Calle, Número, C.P., Ciudad"
 					v-model="address"
 				/>
 			</div>
@@ -47,7 +47,7 @@
 				<input
 					type="text"
 					:class="inputStyle"
-					placeholder="Zona del cuerpo"
+					placeholder="Espalda, brazo, muslo"
 					v-model="zone"
 				/>
 				<span class="mt-4">Tamaño (cm x cm)</span>
