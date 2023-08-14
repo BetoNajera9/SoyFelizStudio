@@ -1,6 +1,8 @@
 <template>
-	<nav class="bg-white z-[99] h-[10%] sticky top-0">
-		<div class="max-w-5xl flex justify-around items-center pt-2">
+	<nav
+		class="bg-white z-[99] h-[10%] sticky top-0 w-screen flex justify-center"
+	>
+		<div class="w-screen max-w-6xl flex justify-around items-center pt-2">
 			<nuxt-img
 				src="/images/soyFelizStudio/happy-index.jpg"
 				alt="soy feliz studio logo"
