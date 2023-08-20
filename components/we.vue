@@ -1,7 +1,7 @@
 <template>
 	<client-only>
-		<div class="max-w-5xl mx-5 lg:mx-auto mt-20 px-0 md:px-10">
-			<section class="flex flex-col items-center lg:items-start  lg:flex-row pb-16  lg:pb-36 mt-10">
+		<div :class="divStyle">
+			<section :class="sectionStyle">
 				<div class="max-w-sm hidden lg:block">
 					<div class="h-full">
 						<nuxt-img
@@ -143,13 +143,21 @@ export default {
 		const config = useRuntimeConfig()
 		const newsData = NewsData.news
 
-		const absolutePosition = ref('top-[1150px]')
+		const sectionStyle = ref('flex flex-col items-center lg:items-start  lg:flex-row pb-16  lg:pb-36 mt-10')
+		const divStyle = ref('max-w-5xl mx-5 lg:mx-auto px-0 md:px-10 mt-20')
 
-		if(!config.public.VIDEO_URL)
-			absolutePosition.value = 'top-[560px]'
+		const absolutePosition = ref('top-[1200px]')
+
+		if(!config.public.VIDEO_URL){
+			sectionStyle.value = sectionStyle.value.replace('mt-10', 'mt-2')
+			divStyle.value = divStyle.value.replace('mt-20', '')
+			absolutePosition.value = 'top-[500px]'
+		}
 
 		return {
 			absolutePosition,
+			sectionStyle,
+			divStyle,
 			newsData
 		}
 	},
