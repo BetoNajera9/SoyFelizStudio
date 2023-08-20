@@ -1,12 +1,12 @@
 <template>
 	<nav class="bg-white z-[99] h-[10%] sticky top-0 w-full flex justify-center">
 		<div class="w-screen max-w-6xl flex justify-around items-center pt-2">
-			<div class="max-w-[50px]">
+			<div>
 				<nuxt-img
+					class="mx-1 lg:ml-4 max-w-[40px] sm:max-w-[50px]"
 					src="/images/soyFelizStudio/happy-index.png"
 					alt="soy feliz studio logo"
 					format="webp"
-					class="mx-none lg:mx-2"
 				/>
 			</div>
 			<span class="tracking-wide pl-1">
@@ -56,6 +56,7 @@
 						<span class="mid" />
 						<span class="bottom" />
 					</button>
+
 					<transition name="translateX">
 						<nav v-show="navOpen">
 							<div class="sidemenu__wrapper">
@@ -96,7 +97,7 @@
 										</a>
 									</li>
 
-									<li class="mt-10">
+									<li class="mt-10 max-w-[50px]">
 										<nuxt-img
 											src="/images/soyFelizStudio/happy-face.png"
 											alt="soy feliz studio logo"
