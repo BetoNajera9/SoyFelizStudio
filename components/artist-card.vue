@@ -1,28 +1,29 @@
 <template>
-	<div class="flex flex-col lg:mx-10">
-		<div>
+	<div class="flex flex-col">
+		<div class="mx-7">
 			<nuxt-img
 				:alt="`soy feliz studio ${name} ${profile}`"
 				:src="`/images/artists/${image}`"
 				format="webp"
 			/>
 		</div>
-		<div class="hidden lg:flex items-center mt-5">
-			<span class="h-auto w-auto">
-				<nuxt-img
-					src="/images/soyFelizStudio/spark.png"
-					alt="soy feliz studio spark"
-					format="webp"
-				/>
-			</span>
-			<span class="text-left text-4xl h-auto">{{ name }}</span>
+		<div class="hidden lg:flex items-start mt-5">
+			<nuxt-img
+				src="/images/soyFelizStudio/spark.png"
+				alt="soy feliz studio spark"
+				class="pt-1"
+				format="webp"
+			/>
+			<span class="text-left text-4xl my-auto leading-none align-middle">{{
+				name
+			}}</span>
 		</div>
-		<div class="hidden lg:block mr-auto pl-[25px] leading-none">
+		<div class="hidden lg:block mr-auto mx-7 leading-none">
 			<a :href="`https://www.instagram.com/${profile.replace('@', '')}/`">
 				<span>{{ profile }}</span>
 			</a>
 		</div>
-		<p class="hidden lg:block text-left mt-7 pl-[25px] leading-none">
+		<p class="hidden lg:block text-left mt-7 mx-7 leading-none">
 			{{ description }}
 		</p>
 	</div>

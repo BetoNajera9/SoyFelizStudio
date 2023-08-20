@@ -1,17 +1,17 @@
 <template>
-	<nav
-		class="bg-white z-[99] h-[10%] sticky top-0 w-screen flex justify-center"
-	>
+	<nav class="bg-white z-[99] h-[10%] sticky top-0 w-full flex justify-center">
 		<div class="w-screen max-w-6xl flex justify-around items-center pt-2">
-			<nuxt-img
-				src="/images/soyFelizStudio/happy-index.jpg"
-				alt="soy feliz studio logo"
-				format="webp"
-				class="mx-2"
-			/>
-			<span class="tracking-wide text-sm sm:text-base"
-				>LLEVAMOS EL AR<span class="text-red">T</span>E EN LA PIEL</span
-			>
+			<div class="max-w-[50px]">
+				<nuxt-img
+					src="/images/soyFelizStudio/happy-index.png"
+					alt="soy feliz studio logo"
+					format="webp"
+					class="mx-none lg:mx-2"
+				/>
+			</div>
+			<span class="tracking-wide pl-1">
+				LLEVAMOS EL AR<span class="text-red">T</span>E EN LA PIEL
+			</span>
 			<nuxt-img
 				v-if="$viewport.isGreaterOrEquals('desktop')"
 				src="/images/soyFelizStudio/spark.png"
@@ -61,33 +61,37 @@
 							<div class="sidemenu__wrapper">
 								<ul class="sidemenu__list">
 									<li class="sidemenu__item" @click="navOpen = !navOpen">
-										<a :href="absolutePosition">
+										<a class="font-grold-black" :href="absolutePosition">
 											I<span class="text-red">N</span>ICIO
 										</a>
 									</li>
 
 									<li class="sidemenu__item" @click="navOpen = !navOpen">
-										<a href="#we"> N<span class="text-red">O</span>SOTROS </a>
+										<a class="font-grold-black" href="#we">
+											N<span class="text-red">O</span>SOTROS
+										</a>
 									</li>
 
 									<li class="sidemenu__item" @click="navOpen = !navOpen">
-										<a href="#galery">
+										<a class="font-grold-black" href="#galery">
 											G<span class="text-red">A</span>LERIA
 										</a>
 									</li>
 
 									<li class="sidemenu__item" @click="navOpen = !navOpen">
-										<a href="#artists">
+										<a class="font-grold-black" href="#artists">
 											ARTIS<span class="text-red">T</span>AS
 										</a>
 									</li>
 
 									<li class="sidemenu__item" @click="navOpen = !navOpen">
-										<a href="#budget"> CO<span class="text-red">T</span>IZA </a>
+										<a class="font-grold-black" href="#budget">
+											CO<span class="text-red">T</span>IZA
+										</a>
 									</li>
 
 									<li class="sidemenu__item" @click="navOpen = !navOpen">
-										<a href="#contact">
+										<a class="font-grold-black" href="#contact">
 											CONTAC<span class="text-red">T</span>O
 										</a>
 									</li>

@@ -1,10 +1,10 @@
 <template>
 	<div class="mt-20 max-w-5xl md:mx-10 lg:mx-auto px-5 md:px-10">
-		<span class="text-4xl lg:text-6xl font-grold-black">
+		<span class="text-4xl lg:text-5xl font-grold-black">
 			GA<span class="text-red">L</span>ERÍA
 		</span>
 
-		<p class="font-grold">
+		<p class="font-grold leading-none">
 			Conoce nuestros tatuajes favoritos de la temporada inspirate
 		</p>
 

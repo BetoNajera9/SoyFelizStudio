@@ -20,7 +20,7 @@
 					</p>
 				</div>
 				<div>
-					<p class="text-4xl md:text-4xl lg:text-5xl leading-none font-grold-black">
+					<p class="text-4xl lg:text-5xl leading-none font-grold-black">
 						¡EN SOY <span class="text-red">F</span>ELIZ
 						<br />
 						LLEVAMOS
@@ -45,24 +45,20 @@
 						format="webp"
 					/>
 				</div>
-				<div class="hidden lg:flex flex-col w-72">
-					<div class="">
-						<nuxt-img
-							src="/images/soyFelizStudio/galery.png"
-							alt="soy feliz studio tattoo"
-							format="webp"
-							class="mb-6"
-						/>
-						<div class="">
-							<nuxt-img
-								src="/images/soyFelizStudio/tatto01.png"
-								alt="soy feliz studio tattoo"
-								format="webp"
-							/>
-						</div>
-					</div>
+				<div class="hidden lg:flex flex-col w-72 mx-2">
+					<nuxt-img
+						src="/images/soyFelizStudio/galery.png"
+						alt="soy feliz studio tattoo"
+						format="webp"
+						class="mb-6"
+					/>
+					<nuxt-img
+						src="/images/soyFelizStudio/tatto01.png"
+						alt="soy feliz studio tattoo"
+						format="webp"
+					/>
 				</div>
-				<p class="block lg:hidden text-5xl mt-5 font-grold-black">
+				<p class="block lg:hidden text-4xl mt-5 font-grold-black">
 					AR<span class="text-red">T</span>IS<span class="text-red">T</span>AS
 					<br />
 					INCREÍB<span class="text-red">L</span>ES <br />
@@ -75,23 +71,24 @@
 			<section>
 				<carousel>
 					<slide v-for="newData in newsData" :key="newData.title">
-						<div class=".carousel__item flex px-8 md:px-20">
+						<div class=".carousel__item flex px-0 md:px-20">
 							<nuxt-img
-								class="w-1/2 hidden lg:block"
-								:src="`/images/news/${newData.image}`"
 								:alt="`soy feliz studio ${newData.title}`"
+								:src="`/images/news/${newData.image}`"
+								class="w-1/2 hidden lg:block"
 								format="webp"
 							/>
 							<div class="flex flex-col">
-								<div class="flex items-center md:ml-10">
+								<div class="flex items-start md:ml-7">
 									<nuxt-img
 										src="/images/soyFelizStudio/spark.png"
 										alt="soy feliz studio spark"
 										format="webp"
+										class="pt-1"
 									/>
-									<span class="text-left text-3xl lg:text-4xl">{{newData.title}}</span>
+									<span class="text-left text-3xl lg:text-4xl ml-3">{{newData.title}}</span>
 								</div>
-								<div class="md:ml-16 mt-5 flex flex-col items-center lg:justify-start ">
+								<div class="px-9 md:px-0 md:ml-16 mt-5 flex flex-col items-center lg:justify-start ">
 									<p class="text-left leading-none">
 										<p class="text-3xl lg:text-4xl leading-none">
 										{{newData.subtitle}}
@@ -149,7 +146,7 @@ export default {
 		const absolutePosition = ref('top-[1150px]')
 
 		if(!config.public.VIDEO_URL)
-			absolutePosition.value = 'top-[500px]'
+			absolutePosition.value = 'top-[560px]'
 
 		return {
 			absolutePosition,

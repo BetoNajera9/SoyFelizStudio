@@ -1,6 +1,6 @@
 <template>
 	<div class="mt-20 max-w-5xl md:mx-10 lg:mx-auto px-5 md:px-10">
-		<span class="text-4xl lg:text-6xl font-grold-black">
+		<span class="text-4xl lg:text-5xl font-grold-black">
 			CO<span class="text-red">T</span>IZA TU TATUAJE
 		</span>
 		<form class="flex flex-col lg:grid grid-cols-2" onsubmit="return false">
@@ -23,7 +23,7 @@
 				<input
 					type="text"
 					:class="inputStyle"
-					placeholder="Celular"
+					placeholder="10 dígitos"
 					v-model="phone"
 				/>
 				<span>Fecha de nacimiento</span>
@@ -61,7 +61,7 @@
 				<input
 					type="text"
 					:class="inputStyle"
-					placeholder="Describenos tu idea"
+					placeholder="Incluye detalles com colores, elementos gráficos, estilos, etc."
 					v-model="idea"
 				/>
 				<span class="mt-4">Adjunta imagenes de referencia</span>
@@ -99,7 +99,10 @@
 					</span>
 				</div>
 				<div class="flex mt-10">
-					<button class="bg-black text-white px-10 py-1" @click="send">
+					<button
+						class="bg-black text-white px-10 py-1 flex items-center"
+						@click="send"
+					>
 						ENVIAR
 					</button>
 				</div>

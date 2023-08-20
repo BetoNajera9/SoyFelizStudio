@@ -1,5 +1,5 @@
 <template>
-	<div class="mt-20 max-w-5xl md:mx-5 lg:mx-auto">
+	<div class="mt-20 max-w-5xl lg:mx-auto">
 		<transition name="translateX">
 			<div
 				class="flex flex-col w-screen h-screen top-0 left-0 fixed z-[100] bg-white"
@@ -33,17 +33,17 @@
 				<div class="py-5">
 					<nuxt-img
 						:alt="`soy feliz studio ${artistSelected.image} ${artistSelected.profile}`"
-						:src="`/images/artists/${artistSelected.image}`"
+						:src="`/images/artists/tatto/${artistSelected.image}`"
 						format="webp"
 					/>
 				</div>
 			</div>
 		</transition>
 
-		<span class="text-4xl lg:text-6xl mx-10 font-grold-black">
+		<span class="text-4xl lg:text-5xl mx-5 md:mx-20 lg:mx-10 font-grold-black">
 			AR<span class="text-red">T</span>IS<span class="text-red">T</span>AS
 		</span>
-		<carousel v-bind="settings" :breakpoints="breakpoints">
+		<carousel v-bind="settings" :breakpoints="breakpoints" class="px-3">
 			<slide
 				v-if="$viewport.isGreaterOrEquals('desktop')"
 				v-for="artist in artists"

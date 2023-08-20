@@ -3,7 +3,7 @@
 		class="flex flex-col lg:grid grid-cols-3 max-w-5xl mx-5 md:mx-10 lg:mx-auto py-24 md:px-10"
 	>
 		<div class="flex flex-col">
-			<span class="text-4xl lg:text-6xl font-grold-black">
+			<span class="text-4xl lg:text-5xl font-grold-black">
 				CON<span class="text-red">T</span>ACTO
 			</span>
 			<span class="my-2">¡Hagamos arte juntos!</span>
@@ -11,8 +11,8 @@
 				Te atendemos con gusto de lunes a domingo de 11 am a 8 pm
 			</span>
 			<span class="my-2 leading-none">
-				T. 68 448 235 <br />
-				WA. 55 5682 4411 <br />
+				T. 55 5682 4411 <br />
+				WA. 55 6030 5026 <br />
 				M. contacto@soyfelizstudio.com
 			</span>
 			<span class="my-2 leading-none">
@@ -20,28 +20,40 @@
 				México, CDMX
 			</span>
 			<div class="mt-10 lg:mt-52 flex justify-start">
-				<a href="https://instagram.com/soyfelizstudio?igshid=NjZiMGI4OTY=">
+				<a
+					class="mr-5 max-w-[40px]"
+					href="https://instagram.com/soyfelizstudio?igshid=NjZiMGI4OTY="
+				>
 					<nuxt-img
 						src="/images/socialNetworks/instagram.png"
 						alt="soy feliz studio instagram"
 						format="webp"
 					/>
 				</a>
-				<a href="https://m.facebook.com/soyfelizstudio/">
+				<a
+					class="mr-5 max-w-[40px]"
+					href="https://m.facebook.com/soyfelizstudio/"
+				>
 					<nuxt-img
 						src="/images/socialNetworks/facebook.png"
 						alt="soy feliz studio facebook"
 						format="webp"
 					/>
 				</a>
-				<a href="https://twitter.com/soyfelizstudio?s=21">
+				<a
+					class="mr-5 max-w-[40px]"
+					href="https://twitter.com/soyfelizstudio?s=21"
+				>
 					<nuxt-img
 						src="/images/socialNetworks/twitter.png"
 						alt="soy feliz studio twitter"
 						format="webp"
 					/>
 				</a>
-				<a href="https://www.tiktok.com/@soyfelizstudio?_t=8WIHIQUzJ4A&_r=1">
+				<a
+					class="mr-5 max-w-[40px]"
+					href="https://www.tiktok.com/@soyfelizstudio?_t=8WIHIQUzJ4A&_r=1"
+				>
 					<nuxt-img
 						src="/images/socialNetworks/tiktok.png"
 						alt="soy feliz studio tiktok"

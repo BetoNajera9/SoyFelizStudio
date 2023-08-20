@@ -8,15 +8,24 @@
 
 	<!--  Sticky Happy Face  -->
 	<div
-		class="fixed bottom-0 right-0 z-[99] mx-5 md:mx-[4.5rem] my-5 md:my-16 xl:m-28 cursor-pointer"
+		class="fixed bottom-0 right-0 z-[99] mx-5 md:mx-[4rem] my-5 md:my-13 xl:my-20 cursor-pointer"
 	>
 		<div class="sticky">
 			<a href="#budget">
+				<div v-if="selectImage" class="absolute top-[-70px] right-[40px]">
+					<nuxt-img
+						src="/images/soyFelizStudio/happy-face-hover.png"
+						alt="soy feliz studio"
+						class="max-w-[120px]"
+						format="webp"
+					/>
+				</div>
 				<nuxt-img
-					@mouseover="selectImage = happyFaceHover"
-					@mouseleave="selectImage = happyFace"
+					@mouseleave="leaveFace($viewport.isGreaterOrEquals('desktop'))"
+					@mouseover="hoverFace($viewport.isGreaterOrEquals('desktop'))"
+					src="/images/soyFelizStudio/happy-face.png"
 					alt="soy feliz studio"
-					:src="selectImage"
+					class="max-w-[60px]"
 					format="webp"
 				/>
 			</a>
@@ -99,19 +108,24 @@ export default defineComponent({
 			if (data) popUpData.value = data
 		}
 
-		const happyFaceHover = '/images/soyFelizStudio/happy-face-hover.png'
-		const happyFace = '/images/soyFelizStudio/happy-face.png'
-
-		const selectImage = ref(happyFace)
+		const selectImage = ref(false)
 
 		const videoUrl = ref(config.public.VIDEO_URL)
+
+		const hoverFace = (width: boolean) => {
+			if (width) selectImage.value = true
+		}
+
+		const leaveFace = (width: boolean) => {
+			if (width) selectImage.value = false
+		}
 
 		return {
 			changeAnnounceStatus,
 			announceStatus,
-			happyFaceHover,
 			selectImage,
-			happyFace,
+			hoverFace,
+			leaveFace,
 			popUpData,
 			videoUrl,
 		}
