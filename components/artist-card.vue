@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col">
-		<div class="mx-7">
+		<div class="lg:mx-7">
 			<nuxt-img
 				:alt="`soy feliz studio ${name} ${profile}`"
 				:src="`/images/artists/${image}`"
