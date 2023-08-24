@@ -13,7 +13,10 @@
 			<span class="my-2 leading-none">
 				T. 55 5682 4411 <br />
 				WA. 55 6030 5026 <br />
-				M. contacto@soyfelizstudio.com
+				M.
+				<a href="mailto:contacto@soyfelizstudio.com">
+					contacto@soyfelizstudio.com
+				</a>
 			</span>
 			<span class="my-2 leading-none">
 				Enrique Rébsamen 743, Narvarte Poniente, Benito Juárez,03020 Ciudad de
