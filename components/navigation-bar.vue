@@ -6,6 +6,7 @@
 					class="mx-1 lg:ml-4 max-w-[40px] sm:max-w-[50px]"
 					src="/images/soyFelizStudio/happy-index.png"
 					alt="soy feliz studio logo"
+					@click="scrollTop"
 					format="webp"
 				/>
 			</div>
@@ -129,8 +130,16 @@ export default defineComponent({
 
 		if (!config.public.VIDEO_URL) absolutePosition.value = '#we'
 
+		const scrollTop = () => {
+			window.scrollTo({
+				behavior: 'smooth',
+				top: 0,
+			})
+		}
+
 		return {
 			absolutePosition,
+			scrollTop,
 			navOpen,
 		}
 	},
