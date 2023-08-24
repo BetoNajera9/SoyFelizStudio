@@ -26,7 +26,7 @@
 					placeholder="10 dígitos"
 					v-model="phone"
 				/>
-				<span>Fecha de nacimiento</span>
+				<span class="mt-4">Fecha de nacimiento</span>
 				<input
 					pattern="\d{1,2}/\d{1,2}/\d{4}"
 					placeholder="dd/mm/yyyy"

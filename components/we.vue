@@ -7,6 +7,7 @@
 						<nuxt-img
 							src="/images/soyFelizStudio/logo.png"
 							alt="soy feliz studio logo"
+							class="px-2"
 							format="webp"
 						/>
 					</div>
@@ -149,7 +150,7 @@ export default {
 		const absolutePosition = ref('top-[1200px]')
 
 		if(!config.public.VIDEO_URL){
-			sectionStyle.value = sectionStyle.value.replace('mt-10', 'mt-2')
+			sectionStyle.value = sectionStyle.value.replace('mt-10', 'mt-5')
 			divStyle.value = divStyle.value.replace('mt-20', '')
 			absolutePosition.value = 'top-[500px]'
 		}

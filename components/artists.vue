@@ -47,7 +47,7 @@
 			v-if="$viewport.isGreaterOrEquals('desktop')"
 			:breakpoints="breakpoints"
 			v-bind="settings"
-			class="px-3"
+			class="px-8"
 		>
 			<slide v-for="artist in artists" :key="artist.name">
 				<artist-card
