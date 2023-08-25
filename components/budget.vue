@@ -81,7 +81,7 @@
 						@click="$emit('closen', 'privacy')"
 						class="text-red ml-2 hover:underline hover:cursor-pointer"
 					>
-						He leido aviso de privacidad
+						He leído aviso de privacidad
 					</span>
 				</div>
 				<div class="flex items-center">
@@ -95,7 +95,7 @@
 						@click="$emit('closen', 'conditions')"
 						class="text-red ml-2 hover:underline hover:cursor-pointer"
 					>
-						He leido terminos y condiciones
+						He leído terminos y condiciones
 					</span>
 				</div>
 				<div class="flex mt-10">
@@ -186,7 +186,11 @@ export default {
 					zone.value = ''
 					size.value = ''
 					idea.value = ''
+					check.value = []
+
+					alert('Se envió correctamente la información')
 				} catch (error) {
+					alert('Error de envío')
 					console.error(error)
 				}
 			}

@@ -38,35 +38,36 @@
 					<p class="leading-none mt-5 font-grold max-w-sm ">
 						Localizados en el corazón de la ciudad de méxico; un espacio multidisciplinario que fomenta el crecimiento artístico y creativo, mientras buscamos la felicidad de nuestros clientes.
 					</p>
+
+					<div class="max-w-sm block lg:hidden mt-5">
+						<nuxt-img
+							src="/images/soyFelizStudio/logo.png"
+							alt="soy feliz studio logo"
+							format="webp"
+						/>
+					</div>
+					<div class="hidden lg:flex flex-col w-72 mx-2">
+						<nuxt-img
+							src="/images/soyFelizStudio/galery.png"
+							alt="soy feliz studio tattoo"
+							format="webp"
+							class="mb-6"
+						/>
+						<nuxt-img
+							src="/images/soyFelizStudio/tatto01.png"
+							alt="soy feliz studio tattoo"
+							format="webp"
+						/>
+					</div>
+					<p class="block lg:hidden text-4xl mt-5 font-grold-black">
+						AR<span class="text-red">T</span>IS<span class="text-red">T</span>AS
+						<br />
+						INCREÍB<span class="text-red">L</span>ES <br />
+						PIEZAS ÚN<span class="text-red">I</span>CAS <br />
+						C<span class="text-red">L</span>IENTES
+						<span class="text-red">F</span>ELICES
+					</p>
 				</div>
-				<div class="max-w-sm block lg:hidden mt-5">
-					<nuxt-img
-						src="/images/soyFelizStudio/logo.png"
-						alt="soy feliz studio logo"
-						format="webp"
-					/>
-				</div>
-				<div class="hidden lg:flex flex-col w-72 mx-2">
-					<nuxt-img
-						src="/images/soyFelizStudio/galery.png"
-						alt="soy feliz studio tattoo"
-						format="webp"
-						class="mb-6"
-					/>
-					<nuxt-img
-						src="/images/soyFelizStudio/tatto01.png"
-						alt="soy feliz studio tattoo"
-						format="webp"
-					/>
-				</div>
-				<p class="block lg:hidden text-4xl mt-5 font-grold-black">
-					AR<span class="text-red">T</span>IS<span class="text-red">T</span>AS
-					<br />
-					INCREÍB<span class="text-red">L</span>ES <br />
-					PIEZAS ÚN<span class="text-red">I</span>CAS <br />
-					C<span class="text-red">L</span>IENTES
-					<span class="text-red">F</span>ELICES
-				</p>
 			</section>
 
 			<section>
