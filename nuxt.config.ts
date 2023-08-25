@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  ssr: true,
   app: {
     head: {
       title: 'Soy Feliz Studio',
@@ -33,5 +34,10 @@ export default defineNuxtConfig({
     public: {
       VIDEO_URL: process.env.VIDEO_URL
     }
+  },
+
+  image: {
+    format: ['webp'],
+    inject: true,
   }
 })
