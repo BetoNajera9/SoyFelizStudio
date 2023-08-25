@@ -21,7 +21,7 @@
 					</p>
 				</client-only>
 			</div>
-			<div class="flex">
+			<div class="flex flex-col lg:flex-row">
 				<client-only>
 					<div>
 						<p class="text-4xl lg:text-5xl leading-none font-grold-black">
