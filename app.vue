@@ -1,7 +1,7 @@
 <template>
 	<!--  Pop Up Component  -->
 	<pop-up
-		v-if="announceStatus === true"
+		v-if="announceStatus === false"
 		@closen="changeAnnounceStatus"
 		:data="popUpData"
 	/>
