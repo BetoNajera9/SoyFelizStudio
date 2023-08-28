@@ -57,14 +57,14 @@
 					placeholder="cm x cm"
 					v-model="size"
 				/>
-				<span class="mt-4">Describenos tu idea</span>
+				<span class="mt-4">Descríbenos tu idea</span>
 				<input
 					type="text"
 					:class="inputStyle"
 					placeholder="Incluye detalles com colores, elementos gráficos, estilos, etc."
 					v-model="idea"
 				/>
-				<span class="mt-4">Adjunta imagenes de referencia</span>
+				<span class="mt-4">Adjunta imágenes de referencia</span>
 				<input
 					class="file:border-red file:bg-white file:px-3 file:py-2 file:text-red"
 					@change="uploadFile"
@@ -95,7 +95,7 @@
 						@click="$emit('closen', 'conditions')"
 						class="text-red ml-2 hover:underline hover:cursor-pointer"
 					>
-						He leído terminos y condiciones
+						He leído términos y condiciones
 					</span>
 				</div>
 				<div class="flex mt-10">

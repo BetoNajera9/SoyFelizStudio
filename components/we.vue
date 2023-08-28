@@ -39,7 +39,7 @@
 							<br />
 						</p>
 						<p class="leading-none mt-5 font-grold max-w-sm ">
-							Localizados en el corazón de la ciudad de méxico; un espacio multidisciplinario que fomenta el crecimiento artístico y creativo, mientras buscamos la felicidad de nuestros clientes.
+							Localizados en el corazón de la ciudad de méxico; somos un espacio multidisciplinario que fomenta el crecimiento artístico y creativo, mientras buscamos la felicidad de nuestros clientes.
 						</p>
 					</div>
 				</client-only>
