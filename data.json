@@ -7,104 +7,97 @@
 			"description": "En la actualidad, los tatuajes en México son un estilo de vida que refuerzan la identidad de una persona, población e incluso historia.",
 			"image": "tatto02.png",
 			"link": "https://www.soyfelizstudio.com/"
-		},
-		{
-			"title": "Ejemplo",
-			"subtitle": "10 cuentas de Instagram de tatuadores mexicanos para tu próxima sesión",
-			"description": "En la actualidad, los tatuajes en México son un estilo de vida que refuerzan la identidad de una persona, población e incluso historia.",
-			"image": "tatto02.png",
-			"link": "https://www.soyfelizstudio.com/"
 		}
 	],
 	"artists": [
 		{
 			"image": "PABLO.png",
-			"name": "PABLO",
+			"name": "Pablo",
 			"profile": "@soyfeliz.pablodiaz",
 			"description": "Creador del estudio de tatuajes Soy Feliz Studio en la Ciudad de México. Después de una trayectoria de Diseño Gráfico, Arte y Producción, lleva su talento al mundo del tatuaje a partir del 2010. Su trabajo se especializa en el trazo fino y meticuloso, geometría y color; de inspira en la naturaleza, la geometría sagrada y el universo."
 		},
 		{
 			"image": "MICKEE.png",
-			"name": "MICKEE",
+			"name": "Mickee",
 			"profile": "@mickee.pazaribu",
 			"description": "Artista con formación en artes plásticas y visuales. Aprendió a hacer todo tipo de tatuajes y fue puliéndolos con el paso del tiempo. La obra de Mickee se enfoca principalmente en diseños detalladas y sencillos inspirados en el estilo neo tradicional combinando estilos para crear un Neo Tattoo. Micke domina de manera impecable tanto el blackwork como el color."
 		},
 		{
 			"image": "TAMA.png",
-			"name": "TAMA",
+			"name": "Tama",
 			"profile": "@TAMAINK_",
 			"description": "Amante de las proporciones y el fine-line, Ricardo se especializa en piezas con geometría, y animales, forjando un estilo propio en tatuajes con inspiración basada en el México Prehispánico."
 		},
 		{
 			"image": "DANIELA.png",
-			"name": "DANIELA ZEPEDA",
-			"profile": "@DANIELA.ZEPEDA",
+			"name": "Daniela Zepeda",
+			"profile": "@daniela.zepeda",
 			"description": "Dani es una artista con marco referencial en la escuela de diseño. Su estilo ecléctico abarca principalmente la línea fina y sombras sutiles. Opta por usar las bases del tatuaje como blackwork y puntillismo que resultan en hermosos y delicados tatuajes ornamentales y microrealistas."
 		},
 		{
 			"image": "BEN.png",
-			"name": "BEN",
-			"profile": "@BEN_ARTE",
+			"name": "Ben",
+			"profile": "@ben_arte",
 			"description": "Desde niño, Ben ha mostrado inclinación hacia las artes, con formación académica en la música y las artes gráficas. Su propuesta artística en el tatuaje, está inspirada en elementos orgánicos y florales tomando como base el estilo neotradi naturalista para darle vida y color a la piel."
 		},
 		{
 			"image": "ARIO.png",
-			"name": "ARI",
-			"profile": "@FOOLISHAPRIL_ART",
+			"name": "Ari",
+			"profile": "@foolishapril_art",
 			"description": "Con educación en Artes y Animación que incluyen internados en Pixar; Ari usa técnicas de grosores de líneas y colores, combinando su estilo de ilustración con personajes de cultura popular y ánime con detalles fantasiosos."
 		},
 		{
 			"image": "MAU.png",
-			"name": "MAU",
-			"profile": "@MAU_TATTOOER",
+			"name": "Mau",
+			"profile": "@mau_tattooer",
 			"description": "Artista y tatuador distingido por su alta atención al detalle y la minuciosa búsqueda de contrastes. Su gráfica toma inspiración del arte clásico, renacentista y art nouveau y tiene una gran influencia de la escuela Coreana fusionando específicamente el estilo blackwork y el realismo. La agresividad, pasión y el aspecto más visceral de la vida son los temas constantes en la obra de Mau."
 		},
 		{
 			"image": "TOCINO.png",
-			"name": "SERGIO",
-			"profile": "@TOCINOINK",
+			"name": "Sergio",
+			"profile": "@tocinoink",
 			"description": "Con formación en artes visuales y diseño, su estilo se desarrolla a través de el fine line. Tocino se enfoca en las miniaturas y el tatuaje minimal con una técnica de tatuaje que se basa en los principios del dibujo académico y gráfica con un toque de realismo en black and grey y acentos de color."
 		},
 		{
 			"image": "SEY.png",
-			"name": "SEY",
-			"profile": "@A2CEY",
+			"name": "Sey",
+			"profile": "@a2cey",
 			"description": "Artista autodidacta especializado en tatuajes con estilo tradicional y blackwork. Dibuja desde que tiene memoria, e incursionó en el arte urbano a través del grafitti en murales a gran formato; y haciendo pintura textil, lo que le llevó a explorar el mundo del tatuaje."
 		},
 		{
 			"image": "GISELLE.png",
-			"name": "GISELLE",
-			"profile": "@GAR_TATTOO",
+			"name": "Giselle",
+			"profile": "@gar_tattoo",
 			"description": "Estudiante de artes visuales que busca crear composiciones con una estética propia que da como resultado tatuajes únicos acompañados de una línea fina en piezas sutiles, delicadas y monocromáticas. Giselle encuentra inspiración en formas geométricas y arquitectónicas clásicas estando siempre en constante búsqueda por desarrollar una  estética propia que mezcle la línea fina con el realismo."
 		},
 		{
 			"image": "CHANG.png",
-			"name": "CHANG",
-			"profile": "@CHANG_A.Q.Q",
+			"name": "Chang",
+			"profile": "@chang_a.q.q",
 			"description": "Encuentra inspiración en la cultura mexicana: desde danzas tradicionales, hasta trabajos artesanales. Le gusta mezclar arte prehispánico con toques asiáticos combinando sus estéticas y aplicando técnicas de black work y acentos de blancos. Chang juega con el tema de la muerte y los alebrijes para crear sus propios insectos o animales fantásticos."
 		},
 		{
 			"image": "SANTILLAN.png",
-			"name": "SANTILLÁN",
-			"profile": "@SANTILLAN.TATTOO",
+			"name": "Santillán",
+			"profile": "@santillan.tattoo",
 			"description": "Artista autodidacta enfocado en diseños microrealistas y personajes animados en temas como anime y caricaturas de fantasía. Santillán hace uso de líneas finas y sombras texturizadas para darle un acabado único a sus tatuajes."
 		},
 		{
 			"image": "NICKI.png",
-			"name": "NICKI",
-			"profile": "@TATTOOSBYROSE_",
+			"name": "Nicki",
+			"profile": "@tattoosbyrose_",
 			"description": "Tatuadora colombiana con más de 5 años de experiecia como artista del tatuaje, amante de pintar en diferentes técnicas. Se caracteriza por la solidez para aplicar el black y el color en sus piezas artísticas."
 		},
 		{
 			"image": "PERCHIN.png",
-			"name": "PERCHIN",
-			"profile": "@PERCHIN_",
+			"name": "Perchin",
+			"profile": "@perchin_",
 			"description": "Tatuador colombiano con más de  10 años de experiencia enfocado en la pintura y el tatuaje neotradicional con colores sólidos y brillantes, su estilo es muy característicamente representado a través de sus piezas con formas orgánicas y animales, que forman diseños potentes llenos de color."
 		},
 		{
 			"image": "RALIS.png",
-			"name": "MICH",
-			"profile": "@RALIS.INK",
+			"name": "Mich",
+			"profile": "@ralis.ink",
 			"description": "Artista en formación, apasionada de su carrera que con un año y medio de experiencia ha logrado desarrollar una buena ejecución de sombras, volumen, línea fina y juego de colores que hacen un estilo cálido. Amante de realizar diseños con gran detalle."
 		}
 	]

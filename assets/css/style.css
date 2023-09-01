@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		font-family: GroldMedium;
+	}
+	@font-face {
+		font-family: 'GroldThin';
+		src: url('/assets/fonts/Grold-Thin.ttf') format('truetype');
+	}
+	@font-face {
+		font-family: 'GroldSemiLight';
+		src: url('/assets/fonts/Grold-SemiLight.ttf') format('truetype');
+	}
+	@font-face {
+		font-family: 'Grold';
+		src: url('/assets/fonts/Grold-Regular.ttf') format('truetype');
+	}
+	@font-face {
+		font-family: 'GroldMedium';
+		src: url('/assets/fonts/Grold-Medium.ttf') format('truetype');
+	}
+	@font-face {
+		font-family: 'GroldBold';
+		src: url('/assets/fonts/Grold-Bold.ttf') format('truetype');
+	}
+	@font-face {
+		font-family: 'GroldBlack';
+		src: url('/assets/fonts/Grold-Black.ttf') format('truetype');
+	}
+}
