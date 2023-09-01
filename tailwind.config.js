@@ -1,8 +1,14 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-	content: ['./index.html', './src/**/*.{js,ts,vue}'],
-	plugins: [],
+	content: [
+		'./components/**/*.{js,vue,ts}',
+		'./layouts/**/*.vue',
+		'./pages/**/*.vue',
+		'./plugins/**/*.{js,ts}',
+		'./nuxt.config.{js,ts}',
+		'./app.vue',
+	],
 	theme: {
 		colors: {
 			...defaultTheme.colors,
@@ -17,12 +23,17 @@ module.exports = {
 
 		extend: {
 			fontFamily: {
+				'grold-thin': ['GroldThin'],
+				'grold-semi-light': ['GroldSemiLight'],
 				grold: ['Grold'],
+				'grold-medium': ['GroldMedium'],
+				'grold-bold': ['GroldBold'],
+				'grold-black': ['GroldBlack'],
 			},
 			lineHeight: {
 				'extra-none': '0.75',
 			},
 		},
 	},
-	variants: {},
+	plugins: [],
 }
