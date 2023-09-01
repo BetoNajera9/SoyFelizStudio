@@ -1,6 +1,11 @@
 {
 	"name": "soyfelizstudio",
-	"version": "1.0.1",
+	"version": "2.0.0",
+	"description": "Landing pago for www.soyfelizstudio.com",
+	"author": "BetoNajera <ing.betonajera@gmail.com>",
+	"license": "LICENSE.md",
+	"readmeFilename": "README.md",
+	"main": "app.vue",
 	"private": true,
 	"scripts": {
 		"build": "nuxt build",
