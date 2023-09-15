@@ -144,20 +144,25 @@ export default {
 			})
 
 		const submitFile = async () => {
-			await useFetch('/api/sendMail', {
-				body: {
-					image: await toBase64(file.value),
-					birthday: birthday.value,
-					address: address.value,
-					email: email.value,
-					phone: phone.value,
-					name: name.value,
-					zone: zone.value,
-					size: size.value,
-					idea: idea.value,
-				},
-				method: 'POST',
-			})
+			const res = await useFetch(
+				'https://www.soyfelizstudio.com/php/index.php',
+				{
+					body: {
+						image: await toBase64(file.value),
+						birthday: birthday.value,
+						address: address.value,
+						email: email.value,
+						phone: phone.value,
+						name: name.value,
+						zone: zone.value,
+						size: size.value,
+						idea: idea.value,
+					},
+					method: 'POST',
+				}
+			)
+
+			return res
 		}
 
 		const send = async () => {
@@ -176,19 +181,23 @@ export default {
 				alert('Se necesita llenar todos los campos')
 			} else {
 				try {
-					await submitFile()
+					const res = await submitFile()
 
-					birthday.value = ''
-					address.value = ''
-					email.value = ''
-					phone.value = ''
-					name.value = ''
-					zone.value = ''
-					size.value = ''
-					idea.value = ''
-					check.value = []
+					if (res.error.value || res.data.value.status === 'error') {
+						alert('Error de envío')
+					} else {
+						birthday.value = ''
+						address.value = ''
+						email.value = ''
+						phone.value = ''
+						name.value = ''
+						zone.value = ''
+						size.value = ''
+						idea.value = ''
+						check.value = []
 
-					alert('Se envió correctamente la información')
+						alert('Se envió correctamente la información')
+					}
 				} catch (error) {
 					alert('Error de envío')
 					console.error(error)
